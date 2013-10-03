@@ -29,20 +29,26 @@ describe "#fib" do
     expect{fib([4, 5])}.to raise_error(NoMethodError)
   end
 
-  it "should return a message when 0 is passed as a parameter" do
-    expect(fib(0)).to eq "No zeroeth number"
-    expect(fib(-0)).to eq "No zeroeth number"
-  end
+  # it "should return a message when 0 is passed as a parameter" do
+  #   expect(fib(0)).to eq "No zeroeth number"
+  #   expect(fib(-0)).to eq "No zeroeth number"
+  # end
 
-  it "should return a message when a negative number is passed as a parameter" do
-    expect(fib(-3)).to eq "No negativith number in fib"
-    expect(fib(-100)).to eq "No negativith number in fib"
-  end
+  # it "should return a message when a negative number is passed as a parameter" do
+  #   expect(fib(-3)).to eq "No negativith number in fib"
+  #   expect(fib(-100)).to eq "No negativith number in fib"
+  # end
+
+  # it "should return a message when a decimal number is passed as a parameter" do
+  #   expect(fib(0.3)).to eq "No 0.3th number in fib" 
+  #   expect(fib(0.5)).to eq "No 0.5th number in fib"
+  #   expect(fib(1.5)).to eq "No 1.5th number in fib"
+  # end
 
   it "should return a message when a decimal number is passed as a parameter" do
-    expect(fib(0.3)).to eq "No 0.3th number in fib" 
-    expect(fib(0.5)).to eq "No 0.5th number in fib"
-    expect(fib(1.5)).to eq "No 1.5th number in fib"
+    expect(fib(0.3)).to eq "Can't look up the 0th, negativith or decimalith number in the fib sequence, duh" 
+    expect(fib(0)).to eq "Can't look up the 0th, negativith or decimalith number in the fib sequence, duh"
+    expect(fib(-2)).to eq "Can't look up the 0th, negativith or decimalith number in the fib sequence, duh"
   end
 
  end
