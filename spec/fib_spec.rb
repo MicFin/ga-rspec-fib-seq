@@ -14,13 +14,22 @@ describe "#fib" do
     expect(parameters.length).to eq 1
    end
 
-   it "should return fibonacci numbers" do
-    expect(fib(1)).to eq 1
-    expect(fib(2)).to eq 1
-    expect(fib(3)).to eq 2
-    expect(fib(4)).to eq 3
-    expect(fib(5)).to eq 5
-    expect(fib(6)).to eq 8
+   # it "should return fibonacci numbers" do
+   #  expect(fib(1)).to eq 1
+   #  expect(fib(2)).to eq 1
+   #  expect(fib(3)).to eq 2
+   #  expect(fib(4)).to eq 3
+   #  expect(fib(5)).to eq 5
+   #  expect(fib(6)).to eq 8
+   #  end
+
+  it "should return fibonacci numbers" do
+    expect(fib(1)).to eq [1]
+    expect(fib(2)).to eq [1,1]
+    expect(fib(3)).to eq [1,1,2]
+    expect(fib(4)).to eq [1,1,2,3]
+    expect(fib(5)).to eq [1,1,2,3,5]
+    expect(fib(6)).to eq [1,1,2,3,5,8]
     end
 
   it "should raise an error when a non-number is passed as a parameter" do
