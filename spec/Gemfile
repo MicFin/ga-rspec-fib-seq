@@ -1,2 +1,4 @@
 source 'http://rubygems.org'
 gem 'rspec'
+gem 'simplecov', :require => false, :group => :test
+gem 'coveralls', require: false
